@@ -1,0 +1,69 @@
+name: Sync approved internal site to external
+
+on:
+  push:
+    paths:
+      - .github/workflows/sync-internal.yml
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: Approved internal commit SHA or branch to publish
+        required: false
+        default: main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: external-site-deployment
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out public website repository
+        uses: actions/checkout@v4
+      - name: Retrieve approved internal website
+        env:
+          SOURCE_REF: ${{ inputs.source_ref || 'fb42f559deb91475009cfe87f509b41bdec2212a' }}
+        run: |
+          git clone --depth 1 https://github.com/iccompsci/internal.git "$RUNNER_TEMP/iccs-internal-source"
+          git -C "$RUNNER_TEMP/iccs-internal-source" fetch --depth 1 origin "$SOURCE_REF"
+          git -C "$RUNNER_TEMP/iccs-internal-source" checkout --detach FETCH_HEAD
+          echo "Source commit: $(git -C "$RUNNER_TEMP/iccs-internal-source" rev-parse HEAD)"
+          rsync -a --delete --exclude='.git/' --exclude='.github/' "$RUNNER_TEMP/iccs-internal-source/" ./
+      - name: Commit approved website snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --staged --quiet; then
+            echo 'Public website already matches approved snapshot'
+          else
+            git commit -m "Publish approved internal ICCS website"
+            git push origin HEAD:main
+          fi
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out published website
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload external website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy external website
+        id: deployment
+        uses: actions/deploy-pages@v4
