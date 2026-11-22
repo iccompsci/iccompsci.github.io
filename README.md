@@ -1,2 +1,2 @@
-# iccompsci.github.io
-ICCS WWW Site
+# internal
+ICCS website development and collaborative editing
