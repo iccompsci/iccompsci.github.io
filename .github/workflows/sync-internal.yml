@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Retrieve approved internal website
         env:
-          SOURCE_REF: ${{ inputs.source_ref || 'fb42f559deb91475009cfe87f509b41bdec2212a' }}
+          SOURCE_REF: ${{ inputs.source_ref || 'main' }}
         run: |
           git clone --depth 1 https://github.com/iccompsci/internal.git "$RUNNER_TEMP/iccs-internal-source"
           git -C "$RUNNER_TEMP/iccs-internal-source" fetch --depth 1 origin "$SOURCE_REF"
