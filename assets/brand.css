@@ -89,28 +89,47 @@
   margin-inline: auto;
 }
 
-/* Landing-page computing illustration becomes a faint backdrop for the copy. */
-.hero {
-  position: relative;
-  display: block;
-  isolation: isolate;
-  padding: 60px 36px 64px;
-  min-height: 340px;
+/* One quiet illustration behind the introduction and faculty collage. */
+.landing-intro {
+  /* A single, uninterrupted backdrop behind both text and transparent portraits. */
+  background-image:
+    linear-gradient(rgba(250,249,245,.87),rgba(250,249,245,.87)),
+    url('illustrations/cs-binary-depth-matched.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: url('illustrations/cs-binary-depth-matched.png') center / cover no-repeat;
-  opacity: .13;
-  pointer-events: none;
-}
-
+.hero { display: block; padding: 60px 36px 42px; min-height: 0; }
+.hero::before { content: none; }
 .hero > div:first-child { max-width: 100%; }
 .hero p { max-width: 900px; }
 .hero-art-network { display: none; }
+/* Let the transparent portraits sit directly on the shared background.
+   No strip padding or margin below them: the backdrop ends with the portraits. */
+.landing-intro .faculty-strip {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* The source PNG has a transparent band under the portraits (about 7.7%).
+   Keep the image at its original scale; clip only that unused bottom band.
+   This also makes the shared background stop at the visible photo baseline. */
+.landing-intro .faculty-collage {
+  position: relative;
+  aspect-ratio: 3.25 / 1;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+}
+.landing-intro .faculty-grade {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  background: transparent;
+}
+.landing-intro .faculty-grade img { opacity: 1; filter: none; }
 
 /* The landing-page cards already identify these program categories. Keep
    section headings available to screen readers without occupying visual space. */
