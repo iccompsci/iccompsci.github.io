@@ -3,19 +3,181 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Draft academic program information page. Content forthcoming.">
+  <meta name="description" content="The Tech Innovation Summer Academy introduces high school students to computing through hands-on projects at Ithaca College.">
   <title>TISA | ICCS · Ithaca College</title>
   <link rel="stylesheet" href="../assets/style.css">
-  <!-- Add the chosen analytics snippet here when privacy approval is complete. -->
-<link rel="stylesheet" href="../assets/accessibility.css"><link rel="stylesheet" href="../assets/times-sitewide.css">
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dbe20187e769452eaf51ae65927ff100"}'></script><!-- End Cloudflare Web Analytics -->
+
+<link rel="stylesheet" href="../assets/accessibility.css"><link rel="stylesheet" href="../assets/times-sitewide.css?v=full-paper-prose-20261126">
+<style>
+/* Page-specific TISA content, with the same type and spacing as other ICCS pages. */
+.tisa-main{padding:20px 0 36px}
+.tisa-main h1{font:500 clamp(38px,5vw,58px)/1.13 var(--serif);letter-spacing:-.035em;margin:14px 0 24px}
+.tisa-main h2{font:500 clamp(30px,3.7vw,44px)/1.2 var(--serif);letter-spacing:-.035em;margin:22px 0 16px}
+.tisa-main p{margin:0 0 20px;line-height:1.7}
+.tisa-main a{color:#19564f;text-underline-offset:3px}
+.tisa-quotes{margin:0 0 26px;padding-left:1.5em}
+.tisa-quotes li{margin:0 0 14px;line-height:1.7}
+.tisa-participant-map{margin:26px 0 0}
+.tisa-participant-map img{display:block;width:min(100%,1263px);height:auto;border:0}
+.tisa-participant-map figcaption{font-size:15px;color:#526961;margin-top:10px}
+/* Lock the displayed slide frame to 2:1 even when source photos have other proportions. */
+.tisa-carousel{width:100%;max-width:850px;margin:24px auto 26px}
+.tisa-photo-frame{position:relative;width:100%;aspect-ratio:2/1;overflow:hidden}
+.tisa-photo-frame .tisa-photo{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center;background:transparent}
+.tisa-carousel-controls{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:14px}
+.tisa-carousel-controls button{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:1px solid #cbdad3;border-radius:50%;background:#faf9f5;color:#19564f;cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
+.tisa-carousel-controls button:hover{background:#d9ead3;border-color:#899a83}
+.tisa-carousel-controls button:focus-visible{outline:3px solid #19564f;outline-offset:3px}
+.tisa-carousel-controls button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tisa-carousel-controls .tisa-pause svg{width:16px;height:16px}
+.tisa-carousel-status{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+</style>
 </head>
 <body><a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header"><div class="wrap"><nav class="nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../index.html#majors">Majors</a><a href="../index.html#minors">Minors</a><a href="../index.html#micro-credentials">Micro-credentials</a><a href="../index.html#faculty">Faculty</a><a href="../index.html#other">Other</a></nav></div></header>
 <main id="main-content" tabindex="-1">
-<section class="inner-hero"><div class="wrap"><h1 class="page-title">TISA</h1><p class="intro">Information about this tisa will be added here.</p></div></section>
-<section class="wrap placeholder"><div><span class="pill">Content forthcoming</span><h2>About this page</h2><p>This page is ready for its official description, key details, and any illustrations or brochures. The text here is a placeholder only.</p></div><aside class="todo"><strong>Suggested future content</strong><ul><li>Short introduction</li><li>Program highlights or requirements</li><li>Relevant SVG diagram or PDF resource</li><li>Admissions or inquiry link</li></ul></aside></section>
+<section class="wrap reading-width tisa-main">
+<h1>Tech Innovation Summer Academy (TISA)</h1>
+<p>TISA is a program designed specifically by the Ithaca College Computer Science faculty <a href="../faculty/toby-dragon.html">Toby Dragon</a> and <a href="../faculty/john-barr.html">John Barr</a> to help anyone and everyone get excited about technology. Rising high school sophomores, juniors, and seniors spend a week in a highly interactive learning environment to explore the ways in which technology is used across many disciplines. Ithaca College computer science faculty and current students guide hands-on activities to introduce a variety of technology-related subjects where computer programs interact with the real world, such as game development, robotics, website design, virtual reality, and artificial intelligence.</p>
+<p>Interested in joining us? Visit the <a href="https://www.ithaca.edu/tech-innovation-summer-academy">official TISA website</a> for information about upcoming sessions and how to apply. We hope to see you there.</p>
+<div class="tisa-carousel" aria-label="Photo slideshow" aria-roledescription="carousel">
+<div class="tisa-photo-frame">
+<img class="tisa-photo" src="../assets/tisa/photos/tisa-01-0391.jpg" alt="Students playing games together in the Ithaca College esports lounge" width="2048" height="1024" decoding="async">
+</div>
+<div class="tisa-carousel-controls" role="group" aria-label="Photo controls">
+<button type="button" class="tisa-prev" aria-label="Previous photograph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+<button type="button" class="tisa-pause" aria-label="Pause automatic slideshow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg></button>
+<button type="button" class="tisa-next" aria-label="Next photograph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+<span class="tisa-carousel-status" role="status" aria-live="polite">Photograph 1 of 17</span>
+</div>
+</div>
+<h2>In the Words of Past Participants</h2>
+<ul class="tisa-quotes">
+<li>“Instead of being scared to code or uninterested, I was able to discover how fun technology and computer science topics could be, and find its relevance in all kinds of applications.”</li>
+<li>“It made me more interested in the communications field and game design.”</li>
+<li>“This class did change my outlook on technology because I now know more of how it works and more of the components within it.”</li>
+<li>“I didn't know I would be so interested. I loved learning about coding, AI, VR, and so much more.”</li>
+<li>“It made me think about all the processes put into making other devices and the different ways technology can be used.”</li>
+<li>“This program definitely gave me a new perspective on technology and computer science. I think that it is something I could see myself doing in the future as a career.”</li>
+</ul>
+<figure class="tisa-participant-map">
+<img src="../assets/tisa/participant-origins.png" width="1263" height="874" alt="Map showing locations across the Northeast and elsewhere in the United States from which TISA participants have attended." loading="lazy">
+<figcaption>Participants have come from across the region and the country.</figcaption>
+</figure>
+</section>
 </main>
+<script>
+(() => {
+  const carousel = document.querySelector('.tisa-carousel');
+  if (!carousel) return;
+  const photo = carousel.querySelector('.tisa-photo');
+  const status = carousel.querySelector('.tisa-carousel-status');
+  const pauseButton = carousel.querySelector('.tisa-pause');
+  const slides = [
+    {
+        "src": "../assets/tisa/photos/tisa-01-0391.jpg",
+        "alt": "Students playing games together in the esports lounge"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-02-3582.jpg",
+        "alt": "Students working with a small robot on a large paper activity mat"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-03-3682.jpg",
+        "alt": "TISA participants and instructors smiling for a group photo indoors"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-04-3757.jpg",
+        "alt": "TISA participants gathered at the Ithaca College fountains"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-05-3785.jpg",
+        "alt": "Students attending a presentation on game design"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-06-3802.jpg",
+        "alt": "Two students developing projects on computers"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-07-3827.jpg",
+        "alt": "Students observing a demonstration in a green-screen studio"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-08-3832.jpg",
+        "alt": "Students visiting a television production studio"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-09-3932.jpg",
+        "alt": "TISA students and faculty gathered outdoors"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-10-3941.jpg",
+        "alt": "Students experimenting with robots and red cups on the floor"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-11-3948.jpg",
+        "alt": "Students arranging patterns with red and beige cups"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-13-4570.jpg",
+        "alt": "Students using virtual reality racing simulators"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-14-7914.jpg",
+        "alt": "Students exploring virtual reality in a classroom"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-15-7916.jpg",
+        "alt": "Students collaborating at VR racing stations"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-16-7921.jpg",
+        "alt": "Students using virtual reality headsets in a computer lab"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-17-7925.jpg",
+        "alt": "Students discussing color and planets during a classroom activity"
+    },
+    {
+        "src": "../assets/tisa/photos/tisa-18-7967.jpg",
+        "alt": "TISA participants gathered in a large outdoor group photo"
+    }
+];
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let index = 0;
+  let timer = null;
+  let paused = reducedMotion.matches;
+  function display(next) {
+    index = (next + slides.length) % slides.length;
+    photo.src = slides[index].src;
+    photo.alt = slides[index].alt;
+    status.textContent = 'Photograph ' + (index + 1) + ' of ' + slides.length;
+  }
+  function stop() {
+    if (timer !== null) window.clearInterval(timer);
+    timer = null;
+  }
+  function start() {
+    stop();
+    if (!paused && !document.hidden && !reducedMotion.matches) {
+      timer = window.setInterval(() => display(index + 1), 5000);
+    }
+  }
+  function updatePause() {
+    pauseButton.innerHTML = paused
+      ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg>'
+      : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>';
+    pauseButton.setAttribute('aria-label', paused ? 'Play automatic slideshow' : 'Pause automatic slideshow');
+  }
+  carousel.querySelector('.tisa-prev').addEventListener('click', () => { display(index - 1); start(); });
+  carousel.querySelector('.tisa-next').addEventListener('click', () => { display(index + 1); start(); });
+  pauseButton.addEventListener('click', () => { paused = !paused; updatePause(); start(); });
+  document.addEventListener('visibilitychange', start);
+  reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) paused = true; updatePause(); start(); });
+  updatePause();
+  start();
+})();
+</script>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5e970ef1df20cfb',t:'MTc5NTM2NjMxMA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5e970ef1df20cfb',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
