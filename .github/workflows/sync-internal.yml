@@ -69,3 +69,4 @@ jobs:
       - name: Deploy external website
         id: deployment
         uses: actions/deploy-pages@v4
+# Publication approval: sync internal/main at f0c865d82b64e09e65df5db55611c8cf3edf382d (2026-11-25 ET).
